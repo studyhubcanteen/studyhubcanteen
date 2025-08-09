@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Notes | Hostel Insider</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <div class="screen">
+                <div class="screen-header">
+                    <div class="screen-header-left">
+                        <div class="screen-header-button close"></div>
+                        <div class="screen-header-button maximize"></div>
+                        <div class="screen-header-button minimize"></div>
+                    </div>
+                    <div class="screen-header-right">
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                    </div>
+                </div>
+                <div class="screen-body">
+                    <div class="screen-body-item left">
+                        <div class="app-title">
+                            <span>REQUEST</span>
+                            <span>NOTES</span>
+                        </div>
+                        <div class="app-contact">Fill the form to request notes or past papers.</div>
+                    </div>
+                    <div class="screen-body-item">
+                        <div class="app-form">
+                            <form action="https://api.web3forms.com/submit" method="POST" id="request_notes_form">
+                                <input type="hidden" name="access_key" value="93580f5d-e8db-4f4c-8a11-9ac598dadacc">
+
+                                <div class="app-form-group">
+                                    <input class="app-form-control" type="text" name="name" placeholder="FULL NAME" required>
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" type="email" name="email" placeholder="EMAIL ADDRESS" required>
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" type="text" name="phone" placeholder="PHONE (OPTIONAL)">
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" type="text" name="subject" placeholder="SUBJECT NAME" required>
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" type="text" name="semester" placeholder="SEMESTER / YEAR" required>
+                                </div>
+                                <div class="app-form-group message">
+                                    <textarea class="app-form-control" name="details" placeholder="ADDITIONAL DETAILS (e.g., Need Unit 4 before Monday)" required></textarea>
+                                </div>
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                <div class="app-form-group buttons">
+                                    <button class="app-form-button" type="reset">CANCEL</button>
+                                    <button class="app-form-button" type="submit" style="background: #ffb26b; color: #222; font-weight: bold; border-radius: 6px; padding: 8px 24px;">SUBMIT</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

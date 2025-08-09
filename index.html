@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Insider</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous" />
+    <style>
+        body {
+            background: none !important;
+            min-height: 100vh;
+            font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+        }
+        #bg-video {
+            position: fixed;
+            top: 0; left: 0;
+            min-width: 100vw;
+            min-height: 100vh;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        .hero {
+            position: relative;
+            background: transparent;
+            padding: 60px 0 40px 0;
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(72,61,139,0.85) 0%, rgba(0,191,255,0.7) 100%);
+            z-index: 0;
+        }
+        .hero .container, .hero h1, .hero p, .animated-btn-list {
+            position: relative;
+            z-index: 1;
+        }
+        .features-section {
+            max-width: 950px;
+            margin: 40px auto 0 auto;
+            background: rgba(255,255,255,0.10);
+            border-radius: 22px;
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+            padding: 44px 24px 36px 24px;
+            backdrop-filter: blur(12px);
+            border: 1.5px solid rgba(255,255,255,0.18);
+        }
+        .features-title {
+            text-align: center;
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: #483d8b;
+            margin-bottom: 32px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            margin-bottom: 36px;
+        }
+        .feature-item {
+            background: rgba(255,255,255,0.35);
+            border-radius: 16px;
+            box-shadow: 0 2px 16px 0 rgba(72,61,139,0.08);
+            padding: 28px 18px 18px 18px;
+            text-align: center;
+            border: 1.5px solid rgba(72,61,139,0.08);
+            transition: transform 0.18s, box-shadow 0.18s;
+            backdrop-filter: blur(6px);
+        }
+        .feature-item:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px 0 rgba(72,61,139,0.13);
+            border-color: #00bfff;
+        }
+        .feature-item h3 {
+            color: #483d8b;
+            font-size: 1.22rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .feature-item p {
+            color: #222;
+            font-size: 1rem;
+            margin: 0;
+        }
+        .testimonials-title {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #00bfff;
+            margin-bottom: 22px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .testimonials-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .testimonial {
+            background: rgba(255,255,255,0.55);
+            border-left: 5px solid #00bfff;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            padding: 18px 22px 12px 22px;
+            font-style: italic;
+            color: #222;
+            font-size: 1.08rem;
+            box-shadow: 0 2px 8px rgba(72,61,139,0.06);
+            backdrop-filter: blur(4px);
+        }
+        .testimonial .author {
+            display: block;
+            margin-top: 10px;
+            font-style: normal;
+            color: #483d8b;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        footer {
+            background: linear-gradient(90deg, #483d8b 0%, #00bfff 100%);
+            color: #fff;
+            text-align: center;
+            padding: 32px 0 24px 0;
+            margin-top: 40px;
+            border-radius: 0 0 18px 18px;
+            box-shadow: 0 -2px 12px rgba(72,61,139,0.08);
+        }
+        @media (max-width: 700px) {
+            .features-section {
+                padding: 18px 4px 12px 4px;
+            }
+            .features-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="log.jpg" class="logo" target="_blank">
+        <img src="log.jpg" alt="">
+    </a>
+
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+    <label for="menu-icon"></label>
+    <nav class="nav"> 		
+        <ul class="pt-5">
+            <li><a href="Features.html">Features</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="pricing.html">pricing-card</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" style="position:relative;">
+        <div class="container">
+            <h1>Hostel Insider</h1>
+            <p>Your all-in-one student subscription: notes, past year papers, events, memes & homework help!</p>
+            <ul class="animated-btn-list">
+              <li>
+                <a href="Features.html" class="animated-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span class="fas fa-arrow-right"></span>
+                </a>
+              </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="features-section">
+        <div class="features-title">Features</div>
+        <div class="features-list">
+            <div class="feature-item">
+                <h3>Fast & Easy Setup</h3>
+                <p>Start using our platform in just a few clicks — no technical skills required.</p>
+            </div>
+            <div class="feature-item">
+                <h3>24/7 Customer Support</h3>
+                <p>Our friendly team is here to help you anytime, day or night.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Safe & Secure</h3>
+                <p>Your privacy is our top priority. We use industry-leading security measures.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Customizable to Your Needs</h3>
+                <p>Tailor the experience exactly how you want it.</p>
+            </div>
+        </div>
+        <div class="testimonials-title">Testimonials</div>
+        <div class="testimonials-list">
+            <div class="testimonial">
+                "This product changed how I work every day — I can't imagine going back!"
+                <span class="author">— Sarah K., Entrepreneur</span>
+            </div>
+            <div class="testimonial">
+                "Reliable, fast, and easy to use. Highly recommended!"
+                <span class="author">— Rahul M., Freelancer</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 StudyHub Canteen. All rights reserved.</p>
+        </div>
+    </footer>
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <script src="js/main.js"></script>
+</body>
+</html>

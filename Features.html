@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Features | Hostel Insider</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #fff7f0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    .features-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 16px;
+    }
+    .features-heading {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ff7b54;
+      margin-bottom: 40px;
+      letter-spacing: 1px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .feature-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
+    }
+    .feature-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 24px 0 rgba(255,123,84,0.08), 0 1.5px 6px 0 rgba(0,0,0,0.04);
+      padding: 36px 24px 28px 24px;
+      text-align: center;
+      transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s, border-color 0.18s;
+      cursor: pointer;
+      border: 2px solid transparent;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .feature-link:focus .feature-card,
+    .feature-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 8px 32px 0 rgba(255,123,84,0.16), 0 3px 12px 0 rgba(0,0,0,0.08);
+      border-color: #ffb26b;
+      outline: none;
+    }
+    .feature-icon {
+      font-size: 2.8rem;
+      margin-bottom: 18px;
+      display: block;
+      line-height: 1;
+    }
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #ff7b54;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+    .feature-desc {
+      font-size: 1rem;
+      color: #444;
+      opacity: 0.85;
+      margin: 0;
+    }
+    /* Responsive grid */
+    @media (max-width: 1024px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 700px) {
+      .features-section {
+        padding: 32px 6px;
+      }
+      .features-heading {
+        font-size: 2rem;
+      }
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .feature-card {
+        padding: 28px 12px 20px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="features-section">
+    <h2 class="features-heading">Our Features</h2>
+    <div class="features-grid">
+      <a class="feature-link" href="Notes & Past Year Papers.html">
+        <div class="feature-card">
+          <span class="feature-icon" aria-label="Notes & Past Year Papers">📚</span>
+          <div class="feature-title">Notes & Past Year Papers</div>
+          <p class="feature-desc">Access a huge collection of class notes and previous year papers for easy exam prep.</p>
+        </div>
+      </a>
+      <a class="feature-link" href="Event Updates.html">
+        <div class="feature-card">
+          <span class="feature-icon" aria-label="Event Updates">🎉</span>
+          <div class="feature-title">Event Updates</div>
+          <p class="feature-desc">Stay updated on campus events, fests, and important student activities.</p>
+        </div>
+      </a>
+      <a class="feature-link" href="paid-homework-help.html">
+        <div class="feature-card">
+          <span class="feature-icon" aria-label="Paid Homework Help">✏</span>
+          <div class="feature-title">Paid Homework Help</div>
+          <p class="feature-desc">Get expert help with your homework and assignments, anytime you need it.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+</body>
+</html>

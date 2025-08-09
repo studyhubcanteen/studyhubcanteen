@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay with QR | Hostel Insider</title>
+  <style>
+    body {
+      background: #fff7f0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .payment-container {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px 0 rgba(255,123,84,0.10), 0 1.5px 6px 0 rgba(0,0,0,0.04);
+      padding: 36px 32px 28px 32px;
+      max-width: 350px;
+      width: 100%;
+      text-align: center;
+    }
+    .payment-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ff7b54;
+      margin-bottom: 18px;
+    }
+    .qr-img {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      border: 2px solid #ffb26b;
+      background: #fff7f0;
+      box-shadow: 0 2px 8px rgba(255,123,84,0.08);
+    }
+    .payment-instructions {
+      color: #444;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    .upi-id {
+      font-weight: 600;
+      color: #ff7b54;
+      font-size: 1.08rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-container">
+    <div class="payment-title">Scan & Pay</div>
+    <img src="qr.jpg" alt="Scan this QR to pay" class="qr-img">
+    <div class="payment-instructions">
+      Scan the QR code above with any UPI app to pay.<br>
+      <span class="upi-id">UPI ID:kaushik029@fam</span>
+      <small>After payment, please share the transaction ID with us for confirmation.</small>
+    </div>
+  </div>
+</body>
+</html>

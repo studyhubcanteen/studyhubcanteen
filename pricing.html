@@ -1,0 +1,241 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Insider Pricing</title>
+    <style>
+        :root {
+            --starter-gradient: linear-gradient(135deg, #ffb26b, #ff7b54);
+            --plus-gradient: linear-gradient(135deg, #4facfe, #00f2fe);
+            --pro-gradient: linear-gradient(135deg, #667eea, #764ba2);
+            --help-gradient: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            --bg-color: #f8f9fa;
+            --text-dark: #1e2022;
+            --text-light: #ffffff;
+            --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.08);
+            --border-radius: 16px;
+        }
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        .header h1 {
+            font-size: 2.2rem;
+            color: #ff7b54;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        .header p {
+            font-size: 1.1rem;
+            color: #6c757d;
+        }
+        .pricing-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .pricing-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            flex: 1 1 220px;
+            max-width: 280px;
+        }
+        .pricing-card {
+            background: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            padding: 32px 22px 28px 22px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        .pricing-card.starter::before {
+            background: var(--starter-gradient);
+        }
+        .pricing-card.plus::before {
+            background: var(--plus-gradient);
+        }
+        .pricing-card.pro::before {
+            background: var(--pro-gradient);
+        }
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 8px;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            z-index: 1;
+        }
+        .pricing-link:focus .pricing-card,
+        .pricing-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 8px 32px 0 rgba(255,123,84,0.16), 0 3px 12px 0 rgba(0,0,0,0.08);
+            border-color: #ffb26b;
+            outline: none;
+        }
+        .plan-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ff7b54;
+            margin-bottom: 8px;
+            margin-top: 10px;
+        }
+        .plan-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #222;
+            margin-bottom: 8px;
+        }
+        .plan-desc {
+            color: #444;
+            font-size: 1rem;
+            margin-bottom: 18px;
+        }
+        .homework-section {
+            margin: 0 auto 40px auto;
+            max-width: 700px;
+            background: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            padding: 32px 22px 28px 22px;
+        }
+        .homework-title {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ff7b54;
+            margin-bottom: 18px;
+        }
+        .homework-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .homework-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            flex: 1 1 180px;
+            max-width: 240px;
+        }
+        .homework-card {
+            background: #fff7f0;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(255,123,84,0.08);
+            padding: 22px 14px 18px 14px;
+            text-align: center;
+            border-top: 5px solid #ffb26b;
+            transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        .homework-link:focus .homework-card,
+        .homework-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px 0 rgba(255,123,84,0.13), 0 3px 12px 0 rgba(0,0,0,0.06);
+            border-color: #ffb26b;
+            outline: none;
+        }
+        .homework-card .hw-title {
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: #ff7b54;
+            margin-bottom: 8px;
+        }
+        .homework-card .hw-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 8px;
+        }
+        .homework-card .hw-desc {
+            color: #444;
+            font-size: 0.98rem;
+        }
+        @media (max-width: 900px) {
+            .pricing-cards, .homework-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .pricing-link, .homework-link {
+                max-width: 340px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Pricing Plans & Homework Help</h1>
+            <p>Simple & Affordable Options for You</p>
+        </div>
+        <div class="pricing-cards">
+            <a class="pricing-link" href="payment.html">
+                <div class="pricing-card starter">
+                    <div class="plan-title">Starter Plan</div>
+                    <div class="plan-price">₹99<span style="font-size:1rem;font-weight:500;">/month</span></div>
+                    <div class="plan-desc">Basic features to get you started.</div>
+                </div>
+            </a>
+            <a class="pricing-link" href="payment.html">
+                <div class="pricing-card plus">
+                    <div class="plan-title">Plus Plan</div>
+                    <div class="plan-price">₹199<span style="font-size:1rem;font-weight:500;">/month</span></div>
+                    <div class="plan-desc">More tools and support for your needs.</div>
+                </div>
+            </a>
+            <a class="pricing-link" href="payment.html">
+                <div class="pricing-card pro">
+                    <div class="plan-title">Pro Plan</div>
+                    <div class="plan-price">₹299<span style="font-size:1rem;font-weight:500;">/month</span></div>
+                    <div class="plan-desc">Unlock all features, stress-free.</div>
+                </div>
+            </a>
+        </div>
+        <div class="homework-section">
+            <div class="homework-title">Homework Help Pricing</div>
+            <div class="homework-cards">
+                <a class="homework-link" href="payment.html">
+                    <div class="homework-card">
+                        <div class="hw-title">Basic Homework Help</div>
+                        <div class="hw-price">₹49 <span style="font-size:1rem;font-weight:500;">/assignment</span></div>
+                        <div class="hw-desc">Quick answers for simple tasks.</div>
+                    </div>
+                </a>
+                <a class="homework-link" href="payment.html">
+                    <div class="homework-card">
+                        <div class="hw-title">Detailed Solutions</div>
+                        <div class="hw-price">₹99 <span style="font-size:1rem;font-weight:500;">/assignment</span></div>
+                        <div class="hw-desc">Step-by-step explanations.</div>
+                    </div>
+                </a>
+                <a class="homework-link" href="payment.html">
+                    <div class="homework-card">
+                        <div class="hw-title">Full Homework Support</div>
+                        <div class="hw-price">₹149 <span style="font-size:1rem;font-weight:500;">/assignment</span></div>
+                        <div class="hw-desc">Complete help including research and review.</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
